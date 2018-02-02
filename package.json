@@ -1,0 +1,22 @@
+{
+  "name": "elcamino",
+  "version": "1.0.0",
+  "description": "Site da Agencia El Camino",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://soares@bitbucket.org/desenvolvimentoelcamino/el-camino.git"
+  },
+  "author": "Fernando Soares",
+  "license": "ISC",
+  "homepage": "http://agenciaelcamino.com",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
