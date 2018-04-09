@@ -1,0 +1,63 @@
+@mixin get_background_image($file_name, $position: 0 0, $repeat: no-repeat) {
+    $image_path: "../img/";
+    background: {
+        image: url($image_path + $file_name);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin center_hv() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@mixin case_name_border($width) {
+    .case-name-border {
+        width: $width + px;
+        height: $default_case_name_border_height;
+    }
+}
+
+@mixin case_grid (
+$bg_file_name: '',
+$top: 0, 
+$left: 0,
+$grid_width_size: 1, 
+$grid_height_size: 1,
+$bg_position: center,
+) {
+    position: absolute;
+    @if($top == 1) {
+        top: 50%;
+    } @else {
+        top: 0;
+    }
+    @if($left == 1) {
+        left: 33.3333%;
+    } @else if ($left == 2)  {
+        left: 66.6666%;
+    } @else {
+        left: 0;
+    }
+    @include get_background_image($bg_file_name, $bg_position);
+    @if $grid_width_size == 1 {
+        width: 33.3333%;
+    } @else if $grid_width_size == 2 {
+        width: 66.6666%;
+    } @else {
+        width: 33.3333%;
+    }
+    @if $grid_height_size == 1 {
+        height: 50%;
+    } @else if $grid_height_size == 2 {
+        height: 100%;
+    } @else {
+        height: 50%;
+    }
+    background-size: 100%;
+}

@@ -1,0 +1,18 @@
+.header {
+    @include get_background_image("bg-topo", bottom); 
+    background-size: 100%;
+    height: 100vh;
+    @media #{$handheld} {
+        background-size: 350%;
+        background-position: bottom;
+    }
+    
+    .logo {
+        @include center_hv();
+        img {
+            @media #{$desktop-hd} {
+                width: 70%;
+            }
+        }
+    }
+}
