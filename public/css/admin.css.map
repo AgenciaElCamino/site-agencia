@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY,CACR,gBAAgB,CAAE,OAAO,CACzB,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,IAAI,CCOb,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,GAAG,CACR,IAAI,CAAE,GAAG,CACT,SAAS,CAAE,qBAAqB,CAChC,iBAAiB,CAAE,qBAAqB,CACxC,aAAa,CAAE,qBAAqB",
+"sources": ["../../application/assets_src/scss/admin/ui/_login.scss","../../application/assets_src/scss/ui/_mixins.scss"],
+"names": [],
+"file": "admin.css"
+}

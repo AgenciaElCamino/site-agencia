@@ -1,0 +1,83 @@
+.cases {
+    position: relative;
+    height: 100vh;
+
+    .show-case {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 90px;
+        color: $white;
+        @include get_background_image("show-case-button.png");
+        background-color: $yellow;
+    }
+    
+    .case {
+
+        .case-name-border {
+            position: absolute;
+            color: $white;
+            font-family: $case-name-font-family;
+            font-size: $case-name-font-size;
+            top: 10px;
+            right: 10px;
+            border: solid 1px #fff;
+            cursor: pointer;
+        }
+        .case-name {
+            margin: 0;
+            padding: 10px;
+            position: absolute;
+            color: $white;
+            font-family: $case-name-font-family;
+            font-size: $case-name-font-size;
+            top: 10px;
+            right: 10px;
+            margin: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        position: absolute;
+        /* FIRST CASE BLOCK */
+        &.elephant-parade {
+            @include case_grid('case_elephant_parade.jpg', 0, 0, 1, 2);
+            @include case_name_border(115);
+        }
+        &.casamob {
+            @include case_grid('case_casamob.jpg', 0, 1, 2, 1);
+            @include case_name_border(95);
+        }
+        &.natal-ford {
+            @include case_grid('case_natal_ford.jpg', 1, 1, 2, 1);
+        }
+        /* SECOND CASE BLOCK */
+        &.cellep {
+            @include case_grid('case_cellep.jpg', 0, 0, 2, 1);       
+        }
+        &.feirao-ford {
+            @include case_grid('case_mega_feirao_ford.jpg', 1, 0, 1, 1);
+        }
+        &.mamae-nestle {
+            @include case_grid('case_nestle_mamae_famosa.jpg', 1, 1, 1, 1);
+        }
+        &.mygloss {
+            @include case_grid('case_mygloss_experience.jpg', 0, 2, 1, 2);
+        }
+        /* THIRD CASE BLOCK */
+        &.site-cellep {
+            @include case_grid('case_site_cellep.jpg');
+        }
+        &.filme-focus {
+            @include case_grid('case_filme_focus_hatchback.jpg', 1, 0);
+        }
+        &.miller {
+            @include case_grid('case_lancamento_miller.jpg', 0, 1, 1, 2);
+        }
+        &.filme-focus-alto {
+            @include case_grid('case_filme_focus_hatchback_alto.jpg', 0, 2, 1, 2);
+        }
+    }
+}
