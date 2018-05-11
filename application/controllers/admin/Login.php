@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
 
     public function index() {
+        echo $this->encryption->encrypt("fer76849");
         $this->load->view('admin/login');
     }
 

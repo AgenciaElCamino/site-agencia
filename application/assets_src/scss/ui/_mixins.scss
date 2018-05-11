@@ -1,7 +1,7 @@
-@mixin get_background_image($file_name, $position: 0 0, $repeat: no-repeat) {
+@mixin get_background_image($file_name, $position: 0 0, $repeat: no-repeat) { 
     $image_path: "../img/";
     background: {
-        image: url($image_path + $file_name);
+        image: url($image_path + $file_name); 
         position: $position;
         repeat: $repeat;
     }
@@ -29,7 +29,7 @@ $top: 0,
 $left: 0,
 $grid_width_size: 1, 
 $grid_height_size: 1,
-$bg_position: center,
+$bg_position: center
 ) {
     position: absolute;
     @if($top == 1) {

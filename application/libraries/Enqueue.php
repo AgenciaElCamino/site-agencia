@@ -33,9 +33,9 @@ class Enqueue {
         }
     }
 
-    public function loadScripts() {
+    public function loadScripts($async = null) {
         foreach ($this->scripts as $script) {
-            echo '<script src="' . base_url() . $this->path_js . $script . '.js" async></script>' . PHP_EOL;
+            echo '<script src="' . base_url() . $this->path_js . $script . '.js"'. ($async != null ? ' async' : null) .'></script>' . PHP_EOL;
         }
     }
 
