@@ -10,6 +10,8 @@ var closeAnimation = {
     height: '0vh'
 };
 
+var animationTime = 1000;
+
 $(function () {
 
     var Cases = {
@@ -19,12 +21,12 @@ $(function () {
         ajaxCase: function (caseName, lang) {
             $.get(lang + '/show/' + caseName, null, function (response) {
                 $('#holder').html(response);
-                $('#holder').animate(openAnimation, 1000);
-                $("html, body").animate({scrollTop: 0}, 1000);
+                $('#holder').animate(openAnimation, animationTime);
+                $("html, body").animate({scrollTop: 0}, animationTime);
             });
         },
         close: function () {
-            $('#holder').animate(closeAnimation, 1000, function () {
+            $('#holder').animate(closeAnimation, animationTime, function () {
                 $('#holder').html('');
             });
         }
