@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['(pt|en)'] = 'site/index/$1';
+$route['(pt|en)/show/([a-z-]+)'] = 'site/show/$1/$2';
 
 $route['admin'] = 'admin/login';
 $route['admin/auth'] = 'admin/login/auth';

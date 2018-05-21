@@ -13,15 +13,15 @@
         @include get_background_image("show-case-button.png");
         background-color: $yellow;
     }
-    
-    .case {
 
+    .case {
+        position: absolute;
         .case-name-border {
             position: absolute;
             color: $white;
             font-family: $case-name-font-family;
             font-size: $case-name-font-size;
-            top: 10px;
+            top: 12px;
             right: 10px;
             border: solid 1px #fff;
             cursor: pointer;
@@ -40,7 +40,6 @@
             cursor: pointer;
         }
 
-        position: absolute;
         /* FIRST CASE BLOCK */
         &.elephant-parade {
             @include case_grid('case_elephant_parade.jpg', 0, 0, 1, 2);
@@ -54,8 +53,9 @@
             @include case_grid('case_natal_ford.jpg', 1, 1, 2, 1);
         }
         /* SECOND CASE BLOCK */
-        &.cellep {
-            @include case_grid('case_cellep.jpg', 0, 0, 2, 1);       
+        &.filme-cellep {
+            @include case_grid('case_cellep.jpg', 0, 0, 2, 1);
+            @include case_name_border(85);
         }
         &.feirao-ford {
             @include case_grid('case_mega_feirao_ford.jpg', 1, 0, 1, 1);

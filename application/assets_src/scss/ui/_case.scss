@@ -1,0 +1,29 @@
+.interna {
+    &.filme-cellep {
+
+        section {
+            height: 100vh;
+            position: relative;
+            &.topo {
+                @include get_background_image("cases/filme-cellep/topo.jpg", center);
+                background-size: 100%;
+            }
+            &.video {
+                background: #ffffff;
+                iframe {
+                    width: 80%;
+                    height: 80%;
+                    @include center_hv();
+                }
+            }
+            &.arte-1 {
+                @include get_background_image("cases/filme-cellep/arte-1.jpg", center);
+                background-size: 100%;
+            }
+            &.arte-2 {
+                @include get_background_image("cases/filme-cellep/arte-2.jpg", center);
+                background-size: 100%;
+            }
+        }
+    }    
+}

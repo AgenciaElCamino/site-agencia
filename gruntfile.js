@@ -16,10 +16,27 @@ module.exports = function (grunt) {
             }
         },
 
+        uglify: {
+            dist: {
+                files: {
+                    'public/js/scripts.min.js': [
+                        'application/assets_src/js/cases.js'
+                    ]
+                }
+            }
+        },
+
         watch: {
             styles: {
                 files: ['**/*.scss'],
                 tasks: ['sass'],
+                options: {
+                    spawn: false
+                }
+            },
+            scripts: {
+                files: ['**/*.js'],
+                tasks: ['uglify'],
                 options: {
                     spawn: false
                 }
@@ -30,6 +47,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('w', ['watch']);
 

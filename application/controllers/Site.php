@@ -10,11 +10,19 @@ class Site extends CI_Controller {
         
         $this->session->set_userdata('lang', $lang);
         $this->lang->load($lang);
-        $this->load->view('site/home');
+        $data = [
+            'lang' => $lang
+        ];
+        $this->load->view('site/home', $data);
     }
 
-    public function showCase() {
+    public function show($lang, $caseName) {
+        $this->session->set_userdata('lang', $lang);
+        $this->lang->load($lang);
         
+        //$this->load->view('site/inc/header-case');
+        $this->load->view('site/inc/cases/' . $caseName);
+        //$this->load->view('site/inc/footer');
     }
 
 }
