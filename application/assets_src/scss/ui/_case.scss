@@ -1,4 +1,5 @@
 .interna {
+
     &.filme-cellep {
 
         section {
@@ -6,7 +7,7 @@
             position: relative;
             &.topo {
                 @include get_background_image("cases/filme-cellep/topo.jpg", center);
-                background-size: 100%;
+                background-size: cover;
             }
             &.video {
                 background: #ffffff;
@@ -25,5 +26,29 @@
                 background-size: 100%;
             }
         }
-    }    
+    }  
+    
+    &.elephant-parade { 
+        section {
+            height: 100vh;
+            position: relative;
+            &.topo {
+                @include get_background_image("cases/elephant-parade/cabecalho.jpg", center);
+            }
+            &.mockups {
+                @include get_background_image("cases/elephant-parade/sec2bg.jpg", center);
+                .cycle-slideshow {
+                    width: 100%;
+                    height: 100vh;
+                    img {
+                        background-color: transparent !important;
+                        width: 65% !important; 
+                        height: auto !important;
+                    }
+                }
+            }
+            background-size: cover; 
+        }
+    }
+
 }

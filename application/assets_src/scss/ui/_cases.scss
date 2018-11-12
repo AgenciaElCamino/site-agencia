@@ -51,7 +51,8 @@
         }
         &.natal-ford {
             @include case_grid('case_natal_ford.jpg', 1, 1, 2, 1);
-        }
+            @include case_name_border(77);
+        } 
         /* SECOND CASE BLOCK */
         &.filme-cellep {
             @include case_grid('case_cellep.jpg', 0, 0, 2, 1);
