@@ -20,6 +20,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'public/js/scripts.min.js': [
+                        'application/assets_src/js/aos.js',
                         'application/assets_src/js/cases.js'
                     ]
                 }
@@ -27,6 +28,9 @@ module.exports = function (grunt) {
         },
 
         watch: {
+            options: {
+                interval: 5000
+            },
             styles: {
                 files: ['**/*.scss'],
                 tasks: ['sass'],
