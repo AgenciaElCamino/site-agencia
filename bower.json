@@ -1,0 +1,21 @@
+{
+  "name": "elcamino",
+  "description": "Site da Agencia El Camino",
+  "main": "gruntfile.js",
+  "authors": [
+    "Fernando Soares"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AgenciaElCamino/site-agencia",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}
