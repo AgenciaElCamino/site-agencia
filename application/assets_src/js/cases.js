@@ -15,17 +15,27 @@ var animationTime = 1000;
 $(function () {
 
     var Cases = {
+        ajaxCase: function (caseName, lang) {
+            $.get(lang + '/show/' + caseName, null, function (response) {
+                var interna = $(document).find('interna');
+                $('#holder').html(response);
+                $('#holder').animate(openAnimation, animationTime, function () {
+                    $('.cases').height('auto')
+                    $('.cases').animate({ opacity: 0 })
+                    $(document).ready(function() {
+                        $('.cycle-slideshow').cycle({
+                            speed:  800
+                        });
+                    })
+                });
+                $("html, body").animate({ scrollTop: 0 }, animationTime);
+            });
+        },
         open: function (caseName, lang) {
             Cases.ajaxCase(caseName, lang);
         },
-        ajaxCase: function (caseName, lang) {
-            $.get(lang + '/show/' + caseName, null, function (response) {
-                $('#holder').html(response);
-                $('#holder').animate(openAnimation, animationTime);
-                $("html, body").animate({scrollTop: 0}, animationTime);
-            });
-        },
         close: function () {
+            $('.cases').animate({ opacity: 1, height: '100vh' })
             $('#holder').animate(closeAnimation, animationTime, function () {
                 $('#holder').html('');
             });
