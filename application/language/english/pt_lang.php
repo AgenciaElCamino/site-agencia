@@ -9,9 +9,6 @@ foreach($content as $data) {
     $lang[$data->text_key] = $data->value;
 }
 
-
-//$lang['logo_title'] = 'AL ANDAR SE HACE EL CAMINO';
-
 /* ADMIN */
 $lang['login_error_message'] = 'Usuário e/ou senha inválidos';
 $lang['login_no_user_registred'] = 'O nome de usuário informado não existe';
