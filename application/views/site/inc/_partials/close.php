@@ -1,0 +1,1 @@
+<?= img(site_url('public/img/close.png'), false, ['border' => 0, 'class' => 'close-case']) ?>
