@@ -60,12 +60,14 @@
         }
         &.feirao-ford {
             @include case_grid('case_mega_feirao_ford.jpg', 1, 0, 1, 1);
+            @include case_name_border(70);
         }
         &.mamae-nestle {
             @include case_grid('case_nestle_mamae_famosa.jpg', 1, 1, 1, 1);
         }
         &.mygloss {
             @include case_grid('case_mygloss_experience.jpg', 0, 2, 1, 2);
+            @include case_name_border(154);
         }
         /* THIRD CASE BLOCK */
         &.site-cellep {

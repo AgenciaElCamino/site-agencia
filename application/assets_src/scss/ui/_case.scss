@@ -51,4 +51,75 @@
         }
     }
 
+    &.casamob {
+        section {
+            img:not(.close-case) {
+                width: 100%
+            }
+            &.topo {
+                // background-color: #f0f0f0;
+                // @include get_background_image("cases/casamob/casamob-topo.jpg", center);
+                // background-size: 55%
+            }
+            &.pessoas {
+                // @include get_background_image("cases/casamob/pessoas.jpg", center);
+                // background-size: 100% 100%;
+            }
+            &.cozinhas {
+                // @include get_background_image("cases/casamob/cozinhas.jpg", center);
+                // background-size: 100% 100%;
+            }
+            &.rodape {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    &.natal-ford {
+        section {
+            img:not(.close-case) {
+                width: 100%
+            }
+            &.video {
+                position: relative;
+                height: 100vh;
+                iframe {
+                    @include center_hv();
+                    width: 70%;
+                    height: inherit;
+                }                
+            }
+        }
+    }
+
+    &.feirao-ford {
+        section {
+            img:not(.close-case) {
+                width: 100%
+            }
+            &.topo {
+               
+            }
+            &.video {
+                position: relative;
+                height: 100vh;
+                iframe {
+                    @include center_hv();
+                    width: 70%;
+                    height: inherit;
+                }                
+            }
+        }
+    }
+
+    &.mygloss {
+        section {
+            img:not(.close-case) {
+                width: 100%
+            }
+        }
+    }
+
 }
